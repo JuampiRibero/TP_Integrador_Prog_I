@@ -21,8 +21,8 @@ El presente trabajo práctico explora el **análisis de la eficiencia de algorit
 ## Conclusiones
 
 * **Eficiencia de Búsqueda:**
-    * **Conjuntos y Diccionarios:** mostraron eficiencia de búsqueda notablemente superior, con tiempos de ejecución prácticamente constantes ($O(1)$) sin importar el tamaño de la estructura.
-    * **Listas:** mostraron un comportamiento lineal ($O(n)$), lo que significa que el tiempo de búsqueda aumenta proporcionalmente con el número de elementos. En conjuntos de datos grandes, esto representa una caída significativa del rendimiento.
+    * **Conjuntos y Diccionarios:** mostraron eficiencia de búsqueda notablemente superior, con tiempos de ejecución prácticamente constantes (O(1)) sin importar el tamaño de la estructura.
+    * **Listas:** mostraron un comportamiento lineal (O(n)), lo que significa que el tiempo de búsqueda aumenta proporcionalmente con el número de elementos. En conjuntos de datos grandes, esto representa una caída significativa del rendimiento.
 * **Uso de Memoria:**
     * Los conjuntos y diccionarios ofrecen una velocidad de búsqueda superior, pero por lo general tienen un mayor consumo de memoria en comparación con las listas.
 * **Impacto de la Recursividad:**
