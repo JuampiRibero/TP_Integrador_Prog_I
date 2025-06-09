@@ -97,3 +97,10 @@ def mostrar_resultados_consola(resultados, tamanios):
         for res in resultados[tipo]:
             print(f"{res['n']:>10} | {res['tiempo_existente']:.6f}s | {res['tiempo_inexistente']:.6f}s | "
                 f"{res['memoria_existente']:.4f} MiB | {res['memoria_inexistente']:.4f} MiB")
+            
+if __name__ == "__main__":
+    tamanios = [100, 500, 1000, 10000, 100000, 1000000, 10000000]
+    resultados = comparar_busquedas(tamanios)
+    mostrar_resultados_consola(resultados, tamanios)
+        
+
