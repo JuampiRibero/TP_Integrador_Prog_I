@@ -2,6 +2,8 @@ import random
 import sys
 import time
 
+sys.setrecursionlimit(2000)
+
 def generar_estructuras(n):
     datos = list(range(n))
 
@@ -21,31 +23,34 @@ def busqueda_recursiva(list, elemento, index=0):
         return True
     return busqueda_recursiva(list, elemento, index + 1)
 
-def medir_memoria(estructura, tipo_estructura):
-    memoria = sys.getsizeof(estructura)
-    return memoria
+def medir_memoria(estructura):
+    return sys.getsizeof(estructura) / (1024 * 1024)
 
 def evaluar_busqueda(estructura, elemento, tipo_estructura):
-
     def buscar():
-        if tipo_estructura == "lista":
+        if tipo_estructura == "list":
             return elemento in estructura
         elif tipo_estructura == "set":
             return elemento in estructura
-        elif tipo_estructura == "diccionario":
+        elif tipo_estructura == "dict":
             return elemento in estructura
 
     inicio = time.time()
-    memoria_utilizada = medir_memoria(buscar())
+    resultado = buscar()
     fin = time.time()
-
+    
     tiempo_ejecucion = fin - inicio
+    memoria_utilizada = medir_memoria(estructura)
+    
     return tiempo_ejecucion, memoria_utilizada
 
+def evaluar_busqueda_recursiva(lista, elemento):
+    inicio = time.time()
+    resultado = busqueda_recursiva(lista, elemento)
+    fin = time.time()
+    
+    tiempo = fin - inicio
+    memoria = medir_memoria(lista)
+    
+    return tiempo, memoria
 
-if __name__ == "__main__":
-    tamanios = [10, 100, 500, 1000, 10000, 100000]
-    for n in tamanios:
-        lista, conjunto, diccionario, existente, no_existente = generar_estructuras(n)
-        
-        
