@@ -30,7 +30,7 @@ El presente trabajo práctico explora el **análisis de la eficiencia de algorit
 
 ## Video
 
-[![Miniatura del video](https://img.youtube.com/vi/0QvqdDkETm0/hqdefault.jpg)]
+![Miniatura del video](https://img.youtube.com/vi/0QvqdDkETm0/hqdefault.jpg)
 
 *[Clic aquí para ver el video en YouTube ](https://www.youtube.com/watch?v=0QvqdDkETm0)*
 
